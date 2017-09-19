@@ -35,5 +35,5 @@ catch(Exception $e)
 $req = $bdd->prepare('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM billets WHERE id = ?');
 $req->execute(array($_GET['billet']));
 $donnees = $req->fetch();
-echo 'Connexion réussi';
+echo 'Connexion a la BDD réussi';
 ?>
